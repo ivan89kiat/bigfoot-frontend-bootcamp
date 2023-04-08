@@ -21,32 +21,26 @@ export default function SightingByIndex() {
     setSightingIndex(urlParam.sightingIndex);
   }
 
-  const sightingInfo = [];
+  const sightingInfo = sighting ? (
+    <Card key={sighting.id}>
+      <Card.Body>
+        <Card.Title>
+          Date: {sighting.date}
+          <br />
+          Location: {sighting.location}
+        </Card.Title>
+        <Card.Text>Notes: {sighting.notes}</Card.Text>
+      </Card.Body>
+    </Card>
+  ) : (
+    `No Data`
+  );
 
-  if (sighting) {
-    for (const key in sighting) {
-      sightingInfo.push(
-        <Card.Text key={key}>
-          {key}:{sighting[key]}
-        </Card.Text>
-      );
-    }
-  }
-
+  console.log(sightingInfo);
   return (
     <div>
       <Link to={"/"}>HOME</Link>
-      <Card>
-        <Card.Body>
-          <Card.Title>
-            {sighting &&
-              `${sighting.COUNTY} ${sighting.YEAR} ${sighting.SEASON}`}{" "}
-            {""}
-            {sighting && sighting.MONTH}
-          </Card.Title>
-          {sightingInfo}
-        </Card.Body>
-      </Card>
+      {sightingInfo}
     </div>
   );
 }

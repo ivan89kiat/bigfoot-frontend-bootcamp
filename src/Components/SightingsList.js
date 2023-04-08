@@ -3,7 +3,6 @@ import axios from "axios";
 import { BACKEND_URL } from "../constant";
 import SightingsListPanel from "./SightingsListPanel";
 import { Link } from "react-router-dom";
-import Card from "react-bootstrap/Card";
 
 export default function SightingsList() {
   const [sightings, setSightings] = useState();
@@ -15,9 +14,9 @@ export default function SightingsList() {
   }, []);
 
   const sightingsViewList = sightings
-    ? sightings.map((sighting, index) => {
+    ? sightings.map((sighting) => {
         return (
-          <Link to={`/sightings/${index}`} key={index}>
+          <Link to={`/sightings/${sighting.id}`} key={sighting.id}>
             <SightingsListPanel data={sighting} />
           </Link>
         );
@@ -27,8 +26,9 @@ export default function SightingsList() {
   return (
     <div>
       <h1>BIGFoot Sightings List:</h1>
-      <Link to="/sightings/filter">Filter</Link>
-      <Card>{sightingsViewList}</Card>
+      <Link to="/sightings/filter">Filter</Link>{" "}
+      <Link to="/new">Post Sighting</Link>
+      <div>{sightingsViewList}</div>
     </div>
   );
 }

@@ -17,3 +17,13 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.card {
+  width: 80%;
+  margin: 1rem auto;
+}
+
+.sightingForm {
+  display: flex;
+  justify-content: center;
+}
