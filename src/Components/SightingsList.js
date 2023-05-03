@@ -26,7 +26,7 @@ export default function SightingsList() {
   return (
     <div>
       <h1>BIGFoot Sightings List:</h1>
-      <h1>Testint Circle Circle</h1>
+      <h1>Testing Circle Circle</h1>
       <Link to="/sightings/filter">Filter</Link>{" "}
       <Link to="/new">Post Sighting</Link>
       <div>{sightingsViewList}</div>
