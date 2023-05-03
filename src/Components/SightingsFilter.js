@@ -5,7 +5,6 @@ import { useNavigate } from "react-router";
 
 export default function SightingFilter() {
   const navigate = useNavigate();
-  const [urlParam, setUrlParam] = useState();
 
   return (
     <div>

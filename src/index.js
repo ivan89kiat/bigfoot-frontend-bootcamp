@@ -2,18 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import {
-  BrowserRouter,
-  createBrowserRouter,
-  Route,
-  Routes,
-} from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SightingsList from "./Components/SightingsList";
 import "bootstrap/dist/css/bootstrap.min.css";
 import SightingByIndex from "./Components/SightingByIndex";
 import SightingFilter from "./Components/SightingsFilter";
 import NewSighting from "./Components/NewSighting";
-import CommentsList from "./Components/CommentsList";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

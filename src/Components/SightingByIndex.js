@@ -4,9 +4,8 @@ import { useParams } from "react-router";
 import { BACKEND_URL } from "../constant";
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
-import { Button, Form } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import CommentsList from "./CommentsList";
-import { useNavigate } from "react-router";
 
 export default function SightingByIndex() {
   const [sightingIndex, setSightingIndex] = useState();
